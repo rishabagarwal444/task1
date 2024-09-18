@@ -1,38 +1,128 @@
-.App {
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
+  margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.task-card:hover {
+  transform: translateY(-5px);
+}
+
+.task-section {
+  margin-top: 20px;
+}
+
+.unique-button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.unique-button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
+.reset-button {
+  background: #ff5e62;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+
+.styled-input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.styled-input:focus {
+  outline: none;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.counter-display {
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin: 0 10px;
+}
+
+.filtered-list {
+  list-style: none;
+  padding: 0;
+}
+
+.filtered-list li {
+  padding: 5px;
+  background-color: #f3f3f3;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+      opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+      opacity: 1;
   }
+}
+
+.dynamic-components p {
+  background-color: #e0e4e5;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
 }
